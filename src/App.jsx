@@ -2,18 +2,18 @@ import './App.css'
 
 function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 navbar-glass">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-2">
             <span className="text-2xl">🌱</span>
-            <span className="text-xl font-bold text-primary-800">AquaGrow</span>
+            <span className="text-xl font-bold text-glass-bright">AquaGrow</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-gray-600 hover:text-primary-600 transition-colors">Features</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-primary-600 transition-colors">How It Works</a>
-            <a href="#specs" className="text-gray-600 hover:text-primary-600 transition-colors">Specifications</a>
-            <a href="#team" className="text-gray-600 hover:text-primary-600 transition-colors">Team</a>
+            <a href="#features" className="text-glass hover:text-white transition-colors">Features</a>
+            <a href="#how-it-works" className="text-glass hover:text-white transition-colors">How It Works</a>
+            <a href="#specs" className="text-glass hover:text-white transition-colors">Specifications</a>
+            <a href="#team" className="text-glass hover:text-white transition-colors">Team</a>
           </div>
         </div>
       </div>
@@ -23,40 +23,42 @@ function Navbar() {
 
 function Hero() {
   return (
-    <section className="gradient-bg min-h-screen flex items-center pt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section className="min-h-screen flex items-center pt-16 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white">
-            <div className="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-6">
+          <div>
+            <div className="inline-block px-4 py-2 glass-panel rounded-full text-sm font-medium mb-6 text-glass">
               Imperial College Embedded Systems Project
             </div>
-            <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-              Smart Plant Care,<br />
-              <span className="text-primary-200">Simplified.</span>
+            <h1 className="title-main mb-6 leading-tight">
+              AquaGrow
             </h1>
-            <p className="text-xl text-primary-100 mb-8 leading-relaxed">
-              AquaGrow is an IoT-powered automated plant watering system that uses real-time
-              soil moisture sensing and intelligent algorithms to keep your plants perfectly hydrated.
+            <p className="text-xl text-glass mb-2">
+              Smart Plant Care, Powered by AI.
+            </p>
+            <p className="text-lg text-glass-dim mb-8 leading-relaxed">
+              Computer vision and machine learning identify your plants automatically,
+              then adjust water and light levels based on integrated sensor data. Built to scale across multiple devices.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#features" className="px-8 py-4 bg-white text-primary-700 font-semibold rounded-lg hover:bg-primary-50 transition-colors shadow-lg">
+              <a href="#features" className="glass-btn px-6 py-3 text-glass-bright font-medium rounded-lg">
                 Explore Features
               </a>
-              <a href="#specs" className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+              <a href="#specs" className="glass-btn px-6 py-3 text-glass font-medium rounded-lg">
                 View Specs
               </a>
             </div>
           </div>
           <div className="flex justify-center">
             <div className="relative">
-              <div className="w-80 h-80 bg-white/10 rounded-full flex items-center justify-center animate-float">
-                <div className="text-[150px]">🪴</div>
+              <div className="w-72 h-72 glass-panel rounded-full flex items-center justify-center animate-float">
+                <div className="text-[120px]">🪴</div>
               </div>
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-accent-400/30 rounded-full flex items-center justify-center glass-card">
-                <span className="text-3xl">💧</span>
+              <div className="absolute -top-4 -right-4 w-16 h-16 icon-glow rounded-full flex items-center justify-center">
+                <span className="text-2xl">💧</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary-300/30 rounded-full flex items-center justify-center glass-card">
-                <span className="text-4xl">📡</span>
+              <div className="absolute -bottom-4 -left-4 w-20 h-20 icon-glow rounded-full flex items-center justify-center">
+                <span className="text-3xl">📷</span>
               </div>
             </div>
           </div>
@@ -69,54 +71,54 @@ function Hero() {
 function Features() {
   const features = [
     {
-      icon: "🌡️",
-      title: "Real-Time Monitoring",
-      description: "Continuous soil moisture and temperature sensing with instant data updates to your dashboard."
+      icon: "🌱",
+      title: "AI Plant Identification",
+      description: "Computer vision and machine learning automatically identify your plant species for optimized care."
     },
     {
-      icon: "🤖",
-      title: "Smart Automation",
-      description: "Intelligent watering schedules based on plant type, weather data, and soil conditions."
+      icon: "💡",
+      title: "Adaptive Light Control",
+      description: "Integrated light sensors adjust grow lights based on your plant's specific requirements."
+    },
+    {
+      icon: "💧",
+      title: "Smart Watering",
+      description: "Soil moisture sensors trigger precise watering tailored to each plant's needs."
     },
     {
       icon: "📱",
-      title: "Remote Control",
-      description: "Control and monitor your plants from anywhere using our web dashboard or mobile app."
+      title: "Multi-Device Support",
+      description: "UI lets you identify and manage multiple AquaGrow devices, designed to scale with your garden."
     },
     {
       icon: "📊",
-      title: "Data Analytics",
-      description: "Historical data tracking and insights to optimize your plant care routine."
+      title: "Real-Time Dashboard",
+      description: "Monitor all sensor data, device status, and plant health from a single web interface."
     },
     {
-      icon: "🔋",
-      title: "Energy Efficient",
-      description: "Low-power design with solar charging capability for sustainable operation."
-    },
-    {
-      icon: "🔔",
-      title: "Smart Alerts",
-      description: "Get notified when your plants need attention or when water levels are low."
+      icon: "🔧",
+      title: "Modular Design",
+      description: "Easily integrate additional sensors and actuators as your system grows."
     }
   ]
 
   return (
-    <section id="features" className="py-20 bg-gray-50">
+    <section id="features" className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Intelligent Features</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything you need to keep your plants thriving with minimal effort.
+          <h2 className="title-section text-3xl font-bold mb-4">Intelligent Features</h2>
+          <p className="text-lg text-glass max-w-2xl mx-auto">
+            AI-powered plant care that adapts to each plant's unique needs.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100">
-              <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center mb-6">
-                <span className="text-3xl">{feature.icon}</span>
+            <div key={index} className="glass-card rounded-xl p-6">
+              <div className="w-12 h-12 icon-glow rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">{feature.icon}</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+              <h3 className="title-section text-lg mb-2">{feature.title}</h3>
+              <p className="text-glass text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -129,52 +131,52 @@ function HowItWorks() {
   const steps = [
     {
       number: "01",
-      title: "Sense",
-      description: "Capacitive soil moisture sensors continuously measure the water content in your plant's soil.",
-      icon: "📡"
+      title: "Identify",
+      description: "Point the camera at your plant. Our ML model recognizes the species and loads optimal care parameters.",
+      icon: "📷"
     },
     {
       number: "02",
-      title: "Process",
-      description: "The ESP32 microcontroller analyzes sensor data and determines optimal watering needs.",
-      icon: "🧠"
+      title: "Sense",
+      description: "Soil moisture, light level, and environmental sensors continuously monitor conditions.",
+      icon: "📡"
     },
     {
       number: "03",
-      title: "Connect",
-      description: "Data is transmitted via WiFi to our cloud platform for remote monitoring and control.",
-      icon: "☁️"
+      title: "Decide",
+      description: "The backend processes sensor data against plant-specific thresholds to determine actions.",
+      icon: "🧠"
     },
     {
       number: "04",
-      title: "Water",
-      description: "The pump activates precisely when needed, delivering the right amount of water to your plants.",
+      title: "Act",
+      description: "Water pump and grow lights activate automatically to maintain ideal growing conditions.",
       icon: "💧"
     }
   ]
 
   return (
-    <section id="how-it-works" className="py-20 bg-white">
+    <section id="how-it-works" className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="title-section text-3xl font-bold mb-4">How It Works</h2>
+          <p className="text-lg text-glass max-w-2xl mx-auto">
             A seamless integration of hardware and software working together.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => (
             <div key={index} className="relative">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <span className="text-4xl">{step.icon}</span>
+              <div className="glass-card rounded-xl p-6 text-center">
+                <div className="w-16 h-16 icon-glow rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-3xl">{step.icon}</span>
                 </div>
-                <div className="text-primary-600 font-bold text-sm mb-2">{step.number}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+                <div className="text-glass-dim font-bold text-sm mb-2">{step.number}</div>
+                <h3 className="title-section text-lg mb-2">{step.title}</h3>
+                <p className="text-glass text-sm">{step.description}</p>
               </div>
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-[60%] w-[80%] h-0.5 bg-primary-200"></div>
+                <div className="hidden lg:block absolute top-1/2 -right-3 w-6 h-0.5 step-connector"></div>
               )}
             </div>
           ))}
@@ -205,37 +207,37 @@ function Specifications() {
   }
 
   return (
-    <section id="specs" className="py-20 bg-primary-900 text-white">
+    <section id="specs" className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Technical Specifications</h2>
-          <p className="text-xl text-primary-200 max-w-2xl mx-auto">
+          <h2 className="title-section text-3xl font-bold mb-4">Technical Specifications</h2>
+          <p className="text-lg text-glass max-w-2xl mx-auto">
             Built with industry-standard components for reliability and performance.
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12">
-          <div className="glass-card rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <span className="text-3xl">⚡</span> Hardware
+        <div className="grid lg:grid-cols-2 gap-6">
+          <div className="glass-card rounded-xl p-6">
+            <h3 className="title-section text-xl mb-6 flex items-center gap-3">
+              <span className="text-2xl">⚡</span> Hardware
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {specs.hardware.map((spec, index) => (
-                <div key={index} className="flex justify-between items-center py-3 border-b border-white/10">
-                  <span className="text-primary-200">{spec.label}</span>
-                  <span className="font-medium">{spec.value}</span>
+                <div key={index} className="flex justify-between items-center py-2 border-b border-white/10">
+                  <span className="text-glass-dim text-sm">{spec.label}</span>
+                  <span className="text-glass-bright text-sm font-medium">{spec.value}</span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="glass-card rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-              <span className="text-3xl">💻</span> Software
+          <div className="glass-card rounded-xl p-6">
+            <h3 className="title-section text-xl mb-6 flex items-center gap-3">
+              <span className="text-2xl">💻</span> Software
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {specs.software.map((spec, index) => (
-                <div key={index} className="flex justify-between items-center py-3 border-b border-white/10">
-                  <span className="text-primary-200">{spec.label}</span>
-                  <span className="font-medium">{spec.value}</span>
+                <div key={index} className="flex justify-between items-center py-2 border-b border-white/10">
+                  <span className="text-glass-dim text-sm">{spec.label}</span>
+                  <span className="text-glass-bright text-sm font-medium">{spec.value}</span>
                 </div>
               ))}
             </div>
@@ -248,39 +250,39 @@ function Specifications() {
 
 function Architecture() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">System Architecture</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="title-section text-3xl font-bold mb-4">System Architecture</h2>
+          <p className="text-lg text-glass max-w-2xl mx-auto">
             A modular design that separates concerns and enables scalability.
           </p>
         </div>
-        <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-primary-50 rounded-xl">
-              <div className="text-5xl mb-4">🌱</div>
-              <h3 className="text-lg font-bold text-primary-800 mb-2">Sensor Layer</h3>
-              <p className="text-sm text-gray-600">Soil moisture, temperature, and ambient light sensors collect environmental data</p>
+        <div className="glass-card rounded-xl p-8">
+          <div className="grid lg:grid-cols-3 gap-6">
+            <div className="glass-panel rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🌱</div>
+              <h3 className="title-section text-lg mb-2">Sensor Layer</h3>
+              <p className="text-glass text-sm">Soil moisture, temperature, and ambient light sensors collect environmental data</p>
             </div>
-            <div className="text-center p-6 bg-accent-50 rounded-xl">
-              <div className="text-5xl mb-4">🔧</div>
-              <h3 className="text-lg font-bold text-accent-700 mb-2">Control Layer</h3>
-              <p className="text-sm text-gray-600">ESP32 processes data, runs decision algorithms, and controls the water pump</p>
+            <div className="glass-panel rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">🔧</div>
+              <h3 className="title-section text-lg mb-2">Control Layer</h3>
+              <p className="text-glass text-sm">ESP32 processes data, runs decision algorithms, and controls the water pump</p>
             </div>
-            <div className="text-center p-6 bg-purple-50 rounded-xl">
-              <div className="text-5xl mb-4">☁️</div>
-              <h3 className="text-lg font-bold text-purple-700 mb-2">Cloud Layer</h3>
-              <p className="text-sm text-gray-600">AWS IoT handles data storage, analytics, and remote access capabilities</p>
+            <div className="glass-panel rounded-xl p-6 text-center">
+              <div className="text-4xl mb-4">☁️</div>
+              <h3 className="title-section text-lg mb-2">Cloud Layer</h3>
+              <p className="text-glass text-sm">AWS IoT handles data storage, analytics, and remote access capabilities</p>
             </div>
           </div>
-          <div className="mt-8 flex justify-center">
-            <div className="flex items-center gap-4 text-gray-400">
-              <div className="w-24 h-0.5 bg-primary-300"></div>
-              <span className="text-2xl">↔️</span>
-              <div className="w-24 h-0.5 bg-accent-300"></div>
-              <span className="text-2xl">↔️</span>
-              <div className="w-24 h-0.5 bg-purple-300"></div>
+          <div className="mt-6 flex justify-center">
+            <div className="flex items-center gap-4 text-glass-dim">
+              <div className="w-20 h-0.5 step-connector"></div>
+              <span className="text-xl">↔</span>
+              <div className="w-20 h-0.5 step-connector"></div>
+              <span className="text-xl">↔</span>
+              <div className="w-20 h-0.5 step-connector"></div>
             </div>
           </div>
         </div>
@@ -291,29 +293,28 @@ function Architecture() {
 
 function Team() {
   const teamMembers = [
-    { name: "Team Member 1", role: "Hardware Lead", emoji: "👨‍💻" },
-    { name: "Team Member 2", role: "Firmware Developer", emoji: "👩‍💻" },
-    { name: "Team Member 3", role: "Cloud & Backend", emoji: "👨‍🔬" },
-    { name: "Team Member 4", role: "Frontend & UI", emoji: "👩‍🎨" },
+    { name: "Jeremy Tan", role: "Backend & Integration", emoji: "👨‍💻" },
+    { name: "Kayvan Faghani", role: "Hardware & Embedded", emoji: "🔧" },
+    { name: "Charlotte Gibson", role: "Frontend & UI", emoji: "👩‍💻" },
   ]
 
   return (
-    <section id="team" className="py-20 bg-white">
+    <section id="team" className="py-20 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="title-section text-3xl font-bold mb-4">Our Team</h2>
+          <p className="text-lg text-glass max-w-2xl mx-auto">
             Imperial College London - Embedded Systems Module 2024/25
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
           {teamMembers.map((member, index) => (
-            <div key={index} className="text-center">
-              <div className="w-32 h-32 bg-gradient-to-br from-primary-400 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                <span className="text-5xl">{member.emoji}</span>
+            <div key={index} className="glass-card rounded-xl p-6 text-center">
+              <div className="w-20 h-20 icon-glow rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-4xl">{member.emoji}</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
-              <p className="text-primary-600">{member.role}</p>
+              <h3 className="title-section text-lg">{member.name}</h3>
+              <p className="text-glass-dim text-sm">{member.role}</p>
             </div>
           ))}
         </div>
@@ -324,21 +325,21 @@ function Team() {
 
 function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="footer-glass py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🌱</span>
-              <span className="text-xl font-bold">AquaGrow</span>
+              <span className="text-xl font-bold text-glass-bright">AquaGrow</span>
             </div>
-            <p className="text-gray-400">
-              An IoT automated plant watering system developed for the Embedded Systems module at Imperial College London.
+            <p className="text-glass-dim text-sm">
+              An AI-powered plant care system using computer vision and integrated sensors, developed for the Embedded Systems module at Imperial College London.
             </p>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-400">
+            <h4 className="text-glass-bright font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-glass-dim text-sm">
               <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
               <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
               <li><a href="#specs" className="hover:text-white transition-colors">Specifications</a></li>
@@ -346,15 +347,14 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-semibold mb-4">Project Resources</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">GitHub Repository</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Demo Video</a></li>
+            <h4 className="text-glass-bright font-semibold mb-4">Project Resources</h4>
+            <ul className="space-y-2 text-glass-dim text-sm">
+              <li><a href="https://github.com/kayvan-faghani/EmbeddedPiCode" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Backend & Hardware Code</a></li>
+              <li><a href="https://github.com/C-Gibson20/Embedded-Systems-UI" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Frontend UI Repository</a></li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <div className="border-t border-white/10 mt-12 pt-8 text-center text-glass-dim text-sm">
           <p>&copy; 2025 AquaGrow. Imperial College London - Embedded Systems Project.</p>
         </div>
       </div>
@@ -364,7 +364,11 @@ function Footer() {
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div
+        className="bg-overlay"
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80')` }}
+      />
       <Navbar />
       <Hero />
       <Features />
